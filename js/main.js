@@ -3,7 +3,7 @@ var canvasElement = document.querySelector('canvas');
 var canvas = {
 	element: canvasElement,
 	context: canvasElement.getContext('2d'),
-	backgroundStyle: #000,
+	backgroundStyle: '#000',
 };
 
 
