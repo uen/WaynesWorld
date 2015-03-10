@@ -105,9 +105,8 @@ requestAnimationFrame(loop = function(){
 	ctx.save();
 	ctx.rotate(currentRot*wayneObject.scale*1.2);
 	
-	bW = width*1.5;
-	if(width<height) bW = height*1.5;
-	ctx.drawImage(burst, -origin.x*1.5, -origin.x*1.5, bW*1.5, bW*1.5);
+	if(width<height) ctx.drawImage(burst, -origin.y*1.5, -origin.y*1.5, height*1.5, height*1.5);
+	else ctx.drawImage(burst, -origin.x*1.5, -origin.x*1.5, width*1.5, width*1.5);
 	currentRot = currentRot + 0.005;
 	ctx.restore();
 	for(var i=0; i<delphiLogos.length;i++){
