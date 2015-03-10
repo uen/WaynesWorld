@@ -7,5 +7,6 @@ Are you ready for a miracle?
 * Improve Wayne Photoshop
 * Update Delphi 6 logo to Delphi 7 logo
 * Add more Wayne stages
+* Delta Time Sync
 * Re-structure code
 
