@@ -68,7 +68,7 @@ var wayneObject = {
 } 
 
 function increaseWayne(){
-	if(wayneObject.scale < 2) wayneObject.scale += 0.0005;
+	if(wayneObject.scale < 1.25) wayneObject.scale += 0.0005;
 }
 
 var waynesAdded = 0;
