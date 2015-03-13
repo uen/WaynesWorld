@@ -21,14 +21,12 @@ for(var i =0; i<5; i++){
 	delphiLogos.push({scale:Math.random()*100, y: Math.random()*canvas.element.clientHeight-1000, x:Math.random()*canvas.element.clientWidth});
 }
 
-miracle = new Audio('/audio/music.ogg');
+var miracle = new Audio('/audio/music.ogg');
 miracle.addEventListener('ended', function(){
 	this.currentTime = 0;
 	this.play();
 }, false);
 miracle.play();
-
-var tick = 0;
 
 var mouse = {clientOffset:{}};
 
