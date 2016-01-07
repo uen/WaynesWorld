@@ -66,13 +66,17 @@ var wayneObject = {
 } 
 
 function increaseWayne(){
-	if(wayneObject.scale < 1.25) wayneObject.scale += 0.0005;
+	if(wayneObject.scale < 1.25){
+		wayneObject.scale += 0.0005;	
+	} 
 }
 
 var waynesAdded = 0;
 var lastWayne = 0;
 function raiseWayne(){
-	if(wayneObject.y<(canvas.element.height/2)+800) stageFunc = increaseWayne;
+	if(wayneObject.y<(canvas.element.height/2)+800){
+		stageFunc = increaseWayne;	
+	}
 	wayneObject.y-=1;
 
 	if(lastWayne == 0 && waynesAdded < 100){
@@ -101,12 +105,18 @@ requestAnimationFrame(loop = function(){
 	ctx.translate(origin.x,origin.y);
 
 	ctx.save();
-	ctx.rotate(currentRot*wayneObject.scale*1.2);
+		ctx.rotate(currentRot*wayneObject.scale*1.2);
 	
-	if(width<height) ctx.drawImage(burst, -origin.y*1.5, -origin.y*1.5, height*1.5, height*1.5);
-	else ctx.drawImage(burst, -origin.x*1.5, -origin.x*1.5, width*1.5, width*1.5);
-	currentRot = currentRot + 0.005;
+		if(width<height){
+			ctx.drawImage(burst, -origin.y*1.5, -origin.y*1.5, height*1.5, height*1.5);	
+		} 
+		else{
+			ctx.drawImage(burst, -origin.x*1.5, -origin.x*1.5, width*1.5, width*1.5);
+		}
+		
+		currentRot = currentRot + 0.005;
 	ctx.restore();
+	
 	for(var i=0; i<delphiLogos.length;i++){
 		delphiLogos[i].y += .05*delphiLogos[i].scale;
 		ctx.drawImage(delphiLogo, -origin.x + delphiLogos[i].x + Math.sin((delphiLogos[i].y*height)/100000)*100, -origin.y+(delphiLogos[i].y%(canvas.element.height+(600))-500), delphiLogos[i].scale, delphiLogos[i].scale);
