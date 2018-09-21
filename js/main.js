@@ -8,20 +8,20 @@ var canvas = {
 
 
 var burst = new Image();
-burst.src = '../img/rays.png';
+burst.src = './img/rays.png';
 
 var wayne = new Image();
-wayne.src = '../img/wayne.png'
+wayne.src = './img/wayne.png'
 
 var delphiLogo = new Image();
-delphiLogo.src = '../img/delphi.png';
+delphiLogo.src = './img/delphi.png';
 
 var delphiLogos = [];
 for(var i =0; i<5; i++){
 	delphiLogos.push({scale:Math.random()*100, y: Math.random()*canvas.element.clientHeight-1000, x:Math.random()*canvas.element.clientWidth});
 }
 
-var miracle = new Audio('../audio/music.ogg');
+var miracle = new Audio('./audio/music.ogg');
 miracle.addEventListener('ended', function(){
 	this.currentTime = 0;
 	this.play();
